@@ -23,25 +23,23 @@ public class CalculatorController : ControllerBase
     [HttpGet("subtract")]
     public decimal Subtract(decimal number1, decimal number2)
     {
-        decimal subractResult = number1 - number2;
-        return subractResult;
+        return _calculatorService.Subtract(number1,number2);
     }
     [HttpGet("multiply")]
     public decimal Multiply(decimal number1, decimal number2)
     {
-        decimal MulResult = number1 * number2;
-        return MulResult;
+        return _calculatorService.Multiply(number1, number2);
     }
     [HttpGet("divide")]
     public decimal Divide(decimal number1, decimal number2)
     {
-        decimal DivResult = number1 / number2;
-        return DivResult;
+        return _calculatorService.Divide(number1, number2);
+
     }
     [HttpGet("modulo")]
     public decimal Modulo(decimal number1, decimal number2)
     {
-        decimal ModResult = number1 % number2;
-        return ModResult;
+        return _calculatorService.Modulo(number1, number2);
+
     }
 }
