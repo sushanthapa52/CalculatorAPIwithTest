@@ -1,5 +1,6 @@
 ﻿namespace CalcLibrary
 {
+    // logic separated from the controllers
     public class CalculatorLogicService
     {
         public decimal Add(decimal number1, decimal number2)
