@@ -1,6 +1,7 @@
 using CalcLibrary;
 
-internal class Program
+
+public class Program
 {
     private static void Main(string[] args)
     {
@@ -8,6 +9,8 @@ internal class Program
 
         // Add services to the container.
         builder.Services.AddSingleton<CalculatorLogicService>();
+
+
         builder.Services.AddControllers();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
