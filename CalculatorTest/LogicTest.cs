@@ -1,4 +1,5 @@
 using CalcLibrary;
+using Microsoft.AspNetCore.Routing;
 
 namespace CalculatorTest
 {
@@ -264,6 +265,8 @@ namespace CalculatorTest
             // Assert
             Assert.AreEqual(-5, result);
         }
+
+
         [TestMethod]
         public void Divide_ShouldThrowExceptionForDivideByZero()
         {
@@ -273,6 +276,19 @@ namespace CalculatorTest
             // Act & Assert
             Assert.ThrowsException<DivideByZeroException>(() => calculator.Divide(7, 0));
         }
+        [Test]
+        public void Divide_ShouldReturnCorrectResultForFractionalResult()
+        {
+            // Arrange
+            CalculatorLogicService calculator = new CalculatorLogicService();
+
+            // Act
+            decimal result = calculator.Divide(5, 2);
+
+            // Assert
+            Assert.AreEqual(2.5m, result);
+        }
+
 
     }
 }
